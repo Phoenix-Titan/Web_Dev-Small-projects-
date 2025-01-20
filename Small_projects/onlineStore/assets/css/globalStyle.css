@@ -22,7 +22,7 @@ main{
 }
 
 section{
-    margin:30px 0px;
+    margin:20px 0px;
 }
 /*This is the product section*/
 .section{
@@ -35,7 +35,11 @@ section{
     font-size:1rem;
     padding-left:8px;
     
- }
+}
+.Review_section{
+    margin-top:50px;
+}
+
 .wrapper_container{
     display:flex;
     overflow-x:auto;
@@ -50,7 +54,7 @@ section{
     backdrop-filter:blur(5px);
     min-width:300px;
     height:340px;
-    margin:5px 20px;
+    margin:5px 13px;
     border-radius:14px;
     transition: all 0.4s ease-in-out;
    
@@ -63,7 +67,7 @@ section{
     width:82%;
     position:relative;
     bottom:20px;
-    left:40px;
+    left:35px;
     line-height:20px;
     font-weight:400;
     font-family:Georgia;
