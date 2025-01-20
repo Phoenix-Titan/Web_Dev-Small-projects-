@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+
+body{
+    background-color:lightblue;
+    
+}
+#title{
+    width:30%;
+    margin:0 auto;
+    font-size:25px;
+    padding-top:20px;
+    font-style:italic;
+    
+
+}
+
+#count_container{
+    width:83%;
+    height:210px;
+    background-color:#FDEEEC;
+    color:black;
+    margin:0 auto;
+    padding: 20px;
+    border-radius:10px;
+    position:relative;
+    top:40px;
+
+}
+#count_container p{
+    text-align: center;
+    font-wíeght:400;
+}
+#counter{
+    font-size:60px;
+    text-align: center;
+    margin-top:40px;
+   
+}
+#count_container button{
+    width:30%;
+    height:50px;
+    font-size:20px;
+    margin:30px 4px 0px 0px;
+    border-radius:10px;
+    border-style:none;
+    outline:none;
+    background-color:lightgreen;
+    position:relative;
+    left:15px;
+    
+}

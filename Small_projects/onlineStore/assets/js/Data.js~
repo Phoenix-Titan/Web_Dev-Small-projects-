@@ -1,0 +1,34 @@
+class Categories{
+    constructor(CategoryName,dataObject){
+	this.CategoryName = CategoryName;
+	this.dataObject = dataObject || [];
+    }
+
+}
+
+class EcommerceStore{
+    constructor(){
+	this.fashion = new Categories('fashion',[]);
+	this.games = new Categories('games',[];)
+	this.tech = new Categories('tech',[]);
+	this.movies = new Categories('movies',[]);
+    }
+
+    addToStore(productData , category){
+	if(category === 'fashion'){
+	    this.fashion.dataObject.push(productData);	    
+	}
+	else if(category === 'games'){
+	    this.games.dataObject.push(productData);
+	}
+	else if(category === 'tech'){
+	    this.tech.dataObject.push(productData);
+	}
+	else if(category === 'movies'){
+	    this.movies.dataObject.push(productData);
+	}
+	else{
+	    console.error(`Please correct the data you are entering ${productData} ,${category}`)
+	}
+    }
+}

@@ -1,0 +1,55 @@
+*{
+    box-sizing:border-box;
+}
+
+/*This is the footer*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    line-height:30px;
+}
+footer div{
+    margin:2px;
+    width:90%;
+    text-align:left;
+    font-size:0.8rem;
+    display: inline-block;
+}
+
+.contact_Us p span{
+    font-style:italic;
+    font-weight:400;
+}
+
+.Payment_icon{
+    font-size:3rem;
+    margin:0px 5px;
+}
+
+.contact_icon{
+    font-size:1rem;
+    padding:5px;
+}
+.social_icon{
+    font-size:2rem;
+    margin:10px;
+    position:relative;
+    bottom:10px;
+}
+.social_media a{
+    text-decoration:none;
+ }
+.social_icon.fa-whatsapp{
+    color:green;
+ }
+.social_icon.fa-facebook{
+    color:lightblue;
+ }
+.social_icon.fa-telegram{
+    color:lightblue;
+ }

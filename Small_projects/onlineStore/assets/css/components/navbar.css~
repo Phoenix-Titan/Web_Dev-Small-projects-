@@ -1,0 +1,102 @@
+*{
+    --text-color:#FFFDEC;
+    --bar-color:#001A6E;
+    --background-color:#009990;
+    --dark-blue:#074799;
+    --btn-colorr: #E1FFBB;
+    box-sizing:border-box;
+    font-family:sans-serif;
+
+
+ }
+
+
+/*This is the header section styling*/
+header {
+    background-color:var(--bar-color);
+    
+}
+header h1{
+    display:inline-block;
+    font-style:italic;
+    font-size:1.4rem;
+    padding-left:1em;
+}
+
+
+
+
+/*This is the nav bar styling*/
+.nav_bar{
+    display:inline-block;
+    position:fixed;
+    right:-250px;
+    width:60%;
+    height:100vh;
+    background-color:rgba(0,0,0,0.5);
+    backdrop-filter:blur(3px);
+    margin:0;
+    border-radius:5px;
+    z-index:454;
+    transition:all 1s ease-in-out;
+    
+}
+/*This is used by js to open and close sidebar*/
+.open_and_close_Sidebar{
+    positon:absolute;
+    right:0px;
+}
+
+.nav_bar ul{
+    padding:0;
+    height:300px;
+}
+.nav_bar ul li{
+    padding:2.4em 1.2em 2.4em 1.2em;
+    margin-top:1px;
+    width:95%;
+    list-style:none;
+    text-align:center;
+    border-radius:3px;
+    position:relative;
+    bottom:10px;
+    left:8px;
+    top:25px;
+    background-color:rgba(0,0,0,0.3);
+    backdrop-filter:blur(2px);
+    transition: all 0.3s ease-in ;
+   
+}
+.nav_bar ul li:hover{
+    background-color:rgba(0,0,0,1);
+    transform: scale(1.02);
+    margin:4px 0px;
+    position:relative;
+    left:6px;
+}
+.nav_bar ul li a{
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:500;
+    width:100%;
+    color:var(--text-color);
+}
+.fa-xmark{
+    font-size:1.6rem;
+    position: relative;
+    top:10px;
+    left:9px;
+}
+
+/*Icons styling area*/
+.fa-bars{
+    font-size:30px;
+    position:relative;
+    left:190px;
+}
+.fa-cart-shopping{
+    font-size:1.5rem;
+    position:relative;
+    left:100px;
+ }
+

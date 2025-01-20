@@ -1,0 +1,16 @@
+//Aurthor: Samuel H. Barker
+// January 3 2025 to  ___ 2025.
+
+let open_Sidebar_icon = document.getElementById('openBtn');
+let close_Sidebar = document.getElementById('closeBtn');
+let Sidebar_menu = document.querySelector('#side_bar');
+
+open_Sidebar_icon.addEventListener('click',(event) =>{
+    Sidebar_menu.classList.toggle('open_and_close_Sidebar');
+
+})
+
+close_Sidebar.addEventListener('click',(event) =>{
+    Sidebar_menu.classList.remove('open_and_close_Sidebar');
+
+})

@@ -1,0 +1,29 @@
+/*This is the styling for the search bar on the store page*/
+
+
+.searchbar form input{
+    width:70%;
+    height:5vh;
+    border:none;
+    outline:none;
+    padding-left:18px;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    margin: 20px 10px;
+    font-size:0.9rem;
+    
+}
+
+.searchbar form button{
+    height:5vh;
+    width:23%;
+    margin-left:0px;
+    outline:none;
+    border:none;
+    position:relative;
+    right:14px;
+    background-color:lightgreen;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    
+}
