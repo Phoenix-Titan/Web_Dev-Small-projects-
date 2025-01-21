@@ -17,7 +17,8 @@ class EcommerceStore{
 	this.fashion = new Categories('fashion',[]);
 	this.games = new Categories('games',[]);
 	this.tech = new Categories('tech',[]);
-	this.movies = new Categories('movies',[]);
+	this.popular = new Categories('movies',[]);
+	this.latest = new Categories('latest',[]);
     }
 
     //This adds product to the category specificied.
@@ -31,8 +32,11 @@ class EcommerceStore{
 	else if(category === 'tech'){
 	    this.tech.dataObject.push(productData);
 	}
-	else if(category === 'movies'){
-	    this.movies.dataObject.push(productData);
+	else if (category == 'popular'){
+	    this.popular.dataObject.push(productData);
+	}
+	else if(category === 'latest'){
+	    this.latest.dataObject.push(productData);
 	}
 	else{
 	    console.error(`Please correct the data you are entering ${productData} ,${category}`);
@@ -44,13 +48,14 @@ class EcommerceStore{
 	console.log(this.fashion);
 	console.log(this.games);
 	console.log(this.tech);
-	console.log(this.movies);
+	console.log(this.popular);
+	console.log(this.latest);
     }
 
     //this return the data of the specified category.
-    Data(category, intance){
+    Data(category){
 	if(category === 'fashion'){
-	    let  fashionData = intance.fashion.dataObject;
+	    let  fashionData = this.fashion.dataObject;
 	    return fashionData;
 	}
 	else if(category == 'games'){
@@ -60,12 +65,15 @@ class EcommerceStore{
 	}
 	else if(category == 'tech'){
 	    let  techData = this.tech.dataObjects;
-	    return techData;
-	    
+	    return techData;    
 	}
-	else if(category == 'movies'){
-	    let movieData = this.movies.dataObjects;
-	    return movieData;
+	else if(category == 'popular'){
+	    let popularData = this.popular.dataObjects;
+	    return popularData;
+	}
+	else if(category == 'latest'){
+	    let popularData = this.latest.dataObjects;
+	    return latestData;
 	}
 	else{
 	    console.error(`This category ${category} doesn't exist.`);
@@ -75,6 +83,8 @@ class EcommerceStore{
     
 }
 
+//This class contain the methods the handle the functionality of various parts
+//of the web store small and large parts.
 class StoreDesign{
      constructor(dataIntance){
 	 this.dataIntance = dataIntance;
@@ -83,11 +93,14 @@ class StoreDesign{
 	 this.fashionData = dataIntance.fashion.dataObject;
 	 this.gameData = dataIntance.games.dataObject;
 	 this.techData = dataIntance.tech.dataObject;
-	 this.moviesData = dataIntance.movies.dataObject; 
+	 this.popularData = dataIntance.popular.dataObject;
+	 this.latestData = dataIntance.latest.dataObject; 
 
      }
     //methods
+
     
+    //this handles the navbar opening and closing on click.
     toggleNavbar(){
 	//this handle the opening and closing of the navbar
 	let open_Sidebar_icon = document.getElementById('openBtn');
@@ -102,10 +115,10 @@ class StoreDesign{
 	    Sidebar_menu.classList.remove('open_and_close_Sidebar');
 	})
 
-
     }
 
-    
+    //This handle display the product data into product item html for store
+    // and home  pages.
     createProductScroll(data , containerClassName){
 	let productContainer = document.querySelector(containerClassName);
 	data.forEach((product,index)=>{
@@ -113,7 +126,7 @@ class StoreDesign{
 	    divTag.classList.add('product_item');
 	    
 	    let itemDetail = (divTag.innerHTML = `
- <img src="/assets/images/gencraft_image_1733182095342-1.png"/>
+ <img src="${product.src}"/>
 		    <p data-index=${index}>${product.name}<br/>
 			<span>Chan Tio</span>	
 		    </p>
@@ -246,5 +259,6 @@ let storeDesign = new StoreDesign(storeProducts);
 storeDesign.toggleNavbar();
 storeDesign.createProductScroll(storeDesign.gameData ,'.product_wrapper');
 storeDesign.createProductScroll(storeDesign.fashionData ,'.sect2');
-
+storeDesign.createProductScroll(storeDesign.techData ,'.sect3');
+storeDesign.createProductScroll(storeDesign.moviesData ,'.sect4');
 
