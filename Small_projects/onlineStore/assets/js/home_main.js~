@@ -1,0 +1,14 @@
+import { EcommerceStore StoreDesign }  from "./main.js"
+
+let homeProduct = new EcommerceStore()
+
+//tech Data
+homeProduct.addToStore({name:'smart Watch',price:'$34.89'}, 'tech')
+//------------------------------------------||||||
+//Movies Data
+homeProduct.addToStore({name:'Ender',price:'$34.89'}, 'popular')
+
+
+let homeDesign = new StoreDesign(homeProduct)
+homeDesign.createProductScroll(homeDesign.techData ,'sect1d');
+homeDesign.createProductScroll(homeDesign.popularData ,'sect2d');
