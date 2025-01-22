@@ -12,6 +12,7 @@ class Categories{
 
 }
 
+
 class EcommerceStore{
     constructor(){
 	this.fashion = new Categories('fashion',[]);
@@ -120,7 +121,7 @@ class StoreDesign{
     //This handle display the product data into product item html for store
     // and home  pages.
     createProductScroll(data , containerClassName){
-	let productContainer = document.querySelector(containerClassName);
+	let productContainer = document.getElementById(containerClassName);
 	data.forEach((product,index)=>{
 	    let divTag = document.createElement('div');
 	    divTag.classList.add('product_item');
@@ -149,7 +150,7 @@ class StoreDesign{
 	});
 	
     }
-
+ex
    
 
     
@@ -214,35 +215,91 @@ storeProducts.addToStore({name:'Coat',price:'$199.00',description:'Winter coat, 
 // 12
 storeProducts.addToStore({name:'Hoodie',price:'$49.99',description:'Comfortable and cozy', date:'jan 28,2026' ,src:''}, 'fashion')
 
-// 13
-storeProducts.addToStore({name:'Shorts',price:'$29.99',description:'Denim shorts', date:'feb 22,2026' ,src:''}, 'fashion')
 
-// 14
-storeProducts.addToStore({name:'Sweater',price:'$34.99',description:'Soft and warm', date:'mar 18,2026' ,src:''}, 'fashion')
-
-// 15
-storeProducts.addToStore({name:'Belt',price:'$25.00',description:'Leather belt', date:'apr 15,2026' ,src:''}, 'fashion')
-
-// 16
-storeProducts.addToStore({name:'Socks',price:'$9.99',description:'Cotton socks', date:'may 10,2026' ,src:''}, 'fashion')
-
-// 17
-storeProducts.addToStore({name:'Swimsuit',price:'$49.95',description:'Bikini', date:'jun 30,2026' ,src:''}, 'fashion')
-
-// 18
-storeProducts.addToStore({name:'Gloves',price:'$19.99',description:'Leather gloves', date:'jul 25,2026' ,src:''}, 'fashion')
-
-// 19
-storeProducts.addToStore({name:'Underwear',price:'$14.99',description:'Cotton underwear', date:'aug 19,2026' ,src:''}, 'fashion')
+//------------------------------------------||||||
 
 
 //Games Data
-storeProducts.addToStore({name:'COD',price:'$34.89'}, 'games')
-storeProducts.addToStore({name:'pubg',price:'$34.89'}, 'games')
-storeProducts.addToStore({name:'Galaxy',price:'$34.89'}, 'games')
+
+ storeProducts.addToStore({
+    name: "Ethereal Swords",
+    price: "$59.99",
+    description: "Embark on a epic journey through a fantasy world, wielding powerful swords and magic to defeat ancient evils.",
+    date: "Nov 15, 2024",
+    src: "ethereal_swords.jpg" },"games")
+
+storeProducts.addToStore({
+    name: "Cogs & Creatures",
+    price: "$29.99",
+    description: "A whimsical puzzle platformer where you guide a curious creature through intricate mechanical worlds.",
+    date: "Jan 20, 2025",
+    src: "cogs_creatures.png" }, "games")
+    
+storeProducts.addToStore({
+    name: "Whispering Sands",
+    price: "$49.99",
+    description: "Explore a vast and vibrant open world filled with secrets, hidden treasures, and intriguing characters.",
+    date: "Mar 5, 2025",
+    src: "whispering_sands.jpeg" },"games")
+
+storeProducts.addToStore({
+    name: "The Iron Alliance",
+    price: "$19.99",
+    description: "A challenging turn-based strategy game with a focus on deep tactical combat and political intrigue.",
+    date: "May 10, 2025",
+    src: "iron_alliance.gif" },"games")
+
+storeProducts.addToStore({
+    name: "Pro Soccer League",
+    price: "$69.99",
+    description: "Experience the thrill of professional soccer with realistic gameplay, player customization, and extensive career modes.",
+    date: "Jul 15, 2025",
+    src: "pro_soccer_league.jpg" },"games")
+    
+storeProducts.addToStore({
+    name: "Nitro Rush 3",
+    price: "$39.99",
+    description: "High-octane arcade racing with intense speed, stunning visuals, and a variety of challenging tracks.",
+    date: "Aug 25, 2025",
+    src: "nitro_rush_3.png" }, "games")
+
+storeProducts.addToStore({
+    name: "Crimson Manor",
+    price: "$24.99",
+    description: "A chilling psychological horror game where you must uncover the dark secrets of an abandoned mansion.",
+    date: "Oct 30, 2025",
+    src: "crimson_manor.jpeg" }, "games")
+
+storeProducts.addToStore({
+    name: "Bounce & Dash",
+    price: "$14.99",
+    description: "A fast-paced and colorful platformer with challenging levels, unique power-ups, and a catchy soundtrack.",
+    date: "Nov 18, 2025",
+    src: "bounce_dash.gif" },"games")
+
+storeProducts.addToStore({
+    name: "Legends of Atheria",
+    price: "$59.99",
+    description: "A classic RPG with deep character customization, a rich story, and challenging turn-based combat.",
+    date: "Dec 20, 2025",
+    src: "legends_of_atheria.jpg" },"games")
+
+storeProducts.addToStore({
+    name: "Ghost Recon: Warzone",
+    price: "$49.99",
+    description: "A tactical first-person shooter with realistic gunplay, intense multiplayer modes, and a challenging campaign.",
+    date: "Jan 10, 2026",
+    src: "ghost_recon_warzone.png" }, "games")
+
+
+//------------------------------------------||||||
+
 
 //tech Data
 storeProducts.addToStore({name:'smart Watch',price:'$34.89'}, 'tech')
+
+
+//------------------------------------------||||||
 
 //Movies Data
 storeProducts.addToStore({name:'Ender',price:'$34.89'}, 'movies')
@@ -257,8 +314,10 @@ storeProducts.addToStore({name:'Ender',price:'$34.89'}, 'movies')
 let storeDesign = new StoreDesign(storeProducts);
 
 storeDesign.toggleNavbar();
-storeDesign.createProductScroll(storeDesign.gameData ,'.product_wrapper');
-storeDesign.createProductScroll(storeDesign.fashionData ,'.sect2');
-storeDesign.createProductScroll(storeDesign.techData ,'.sect3');
-storeDesign.createProductScroll(storeDesign.moviesData ,'.sect4');
+storeDesign.createProductScroll(storeDesign.popularData ,'sect1');
+storeDesign.createProductScroll(storeDesign.latestData ,'sect2');
+
+storeDesign.createProductScroll(storeDesign.fashionData ,'sect3');
+storeDesign.createProductScroll(storeDesign.techData ,'sect4');
+storeDesign.createProductScroll(storeDesign.gameData ,'sect5');
 
