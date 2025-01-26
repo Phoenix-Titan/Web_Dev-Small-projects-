@@ -159,6 +159,29 @@ export class StoreDesign{
 	
     }
 
+
+    scrollProductsOnClick(){
+	let categorySections = document.querySelectorAll(".cloths_section")
+	
+	categorySections.forEach((section)=>{
+	    let productWapper = section.querySelector(".product_wrapper");
+	    let rightArrowIcon = section.querySelector(".fa-solid.fa-arrow-right");
+	    
+	    rightArrowIcon.addEventListener('click',()=>{
+		
+		productWapper.scrollLeft += 350;
+
+		let scrollableSectionWidth = productWapper.scrollLeft + productWapper.clientWidth;
+		let scrollSectionWidth = productWapper.scrollWidth;
+	   
+		if(scrollableSectionWidth >= scrollSectionWidth){
+		    rightArrowIcon.classList.remove("fa-arrow-right")
+		}	
+	  
+	    });
+	})
+
+    }
    
 
     
@@ -215,16 +238,18 @@ storeProducts.addToStore({name:'Hoodie',price:'$49.99',description:'Comfortable 
 
 //------------------------------------------||||||
 
+//Tech Data
+
 storeProducts.addToStore({
-  name: 'T-shirt',price: '$19.99',description: 'Comfortable cotton',date: 'feb 15, 2025',src: '/assets/images/store/fashion/T-shirt.jpg',}, 'tech');
+  name: 'Cyber Punk glasses',price: '$19.99',description: 'Wear the future of technology in style',date: 'feb 15, 2025',src: '/assets/images/store/tech/cyber_punk_glasses.webp',}, 'tech');
 
 storeProducts.addToStore({name: 'Laptop',price: '$999.99',description: 'Powerful and portable',date: 'jan 10, 2024',src: '/assets/images/store/tech/laptop.jpg',}, 'tech');
 
-storeProducts.addToStore({name: 'Smartphone', price: '$799.99',description: 'Flagship features', date: 'mar 20, 2023',src: '/assets/images/store/tech/smartphone.jpg',}, 'tech');
+storeProducts.addToStore({name: 'Smartphone', price: '$799.99',description: 'Flagship features', date: 'mar 20, 2023',src: '/assets/images/store/tech/flip_phone.jpg',}, 'tech');
 
-storeProducts.addToStore({ name: 'Headphones',price: '$149.99',description: 'High-fidelity sound',date: 'apr 5, 2025',src: '/assets/images/store/tech/headphones.jpg',}, 'tech');
+storeProducts.addToStore({ name: 'Headphones',price: '$149.99',description: 'High-fidelity sound',date: 'apr 5, 2025',src: '/assets/images/store/tech/headphone.jpg',}, 'tech');
 
-storeProducts.addToStore({name: 'Smartwatch',price: '$299.99',description: 'Fitness tracking and more',date: 'may 15, 2024',src: '/assets/images/store/tech/smartwatch.jpg',}, 'tech');
+storeProducts.addToStore({name: 'Smartwatch',price: '$299.99',description: 'Fitness tracking and more',date: 'may 15, 2024',src: '/assets/images/store/tech/smart_watch.jpg',}, 'tech');
 
 storeProducts.addToStore({name: 'Tablet',price: '$399.99',description: 'Versatile and portable',date: 'jun 20, 2023',src: '/assets/images/store/tech/tablet.jpg',}, 'tech');
 
@@ -232,20 +257,21 @@ storeProducts.addToStore({ name: 'Router', price: '$199.99', description: 'Fast 
 
 storeProducts.addToStore({ name: 'Speaker', price: '$99.99',description: 'Portable and powerful sound', date: 'aug 25, 2023',src: '/assets/images/store/tech/speaker.jpg',}, 'tech');
 
-storeProducts.addToStore({name: 'Keyboard',price: '$79.99', description: 'Mechanical keys for smooth typing',date: 'sep 5, 2025',src: '/assets/images/store/tech/keyboard.jpg',}, 'tech');
+storeProducts.addToStore({name: '3D Printer',price: '$79.99', description: 'Bringing your 3D imagination to life.',date: 'sep 5, 2025',src: '/assets/images/store/tech/3D_printer.jpg',}, 'tech');
 
-storeProducts.addToStore({name: 'Mouse',price: '$39.99',description: 'Ergonomic design for comfort',date: 'oct 20, 2024', src: '/assets/images/store/tech/mouse.jpg',}, 'tech');
+storeProducts.addToStore({name: 'Mini Projector',price: '$39.99',description: 'Ergonomic design and portable cinima',date: 'oct 20, 2024', src: '/assets/images/store/tech/mini_projector.jpg',}, 'tech');
 
 storeProducts.addToStore({ name: 'Monitor',price: '$249.99',description: 'High resolution for stunning visuals',date: 'nov 15, 2023',src: '/assets/images/store/tech/monitor.jpg',}, 'tech');
 
-storeProducts.addToStore({name: 'Webcam',price: '$49.99',description: 'Crystal-clear video calls', date: 'dec 10, 2024',
-src: '/assets/images/store/tech/webcam.jpg',}, 'tech');
+storeProducts.addToStore({name: 'Looi Bot',price: '$49.99',description: 'Awsome and fun activities with you firend Looi', date: 'dec 10, 2024',
+src: '/assets/images/store/tech/Looi_bot.png',}, 'tech');
 
 
+//------------------------------------------||||||
 
 //Games Data
 
- storeProducts.addToStore({
+storeProducts.addToStore({
     name: "Ethereal Swords",
     price: "$59.99",
     description: "Embark on a epic journey through a fantasy world, wielding powerful swords and magic to defeat ancient evils.",
@@ -318,19 +344,61 @@ storeProducts.addToStore({
 
 //------------------------------------------||||||
 
+//Popular Data
+
+// 1
+storeProducts.addToStore({name:'Men Boxers',price:'$19.99',description:'Comfortable cotton', date:'feb 15,2025' ,src:"/assets/images/store/fashion/boxers.jpg"}, 'popular') 
+
+//2 
+storeProducts.addToStore({ name: 'Monitor',price: '$249.99',description: 'High resolution for stunning visuals',date: 'nov 15, 2023',src: '/assets/images/store/tech/monitor.jpg',}, 'popular');
+
+// 3
+storeProducts.addToStore({name:'Leader Gloves',price:'$59.99',description:'Slim fit, dark wash', date:'mar 20,2025' ,src:"/assets/images/store/fashion/leader_gloves.jpg"}, 'popular')
+
+// 4
+storeProducts.addToStore({name:'Beach Swim Suit',price:'$24.95',description:'UV protection', date:'apr 10,2025' ,src:"/assets/images/store/fashion/swim_suit_blue.jpg"}, 'popular')
+
+//5
+storeProducts.addToStore({name: 'Laptop',price: '$999.99',description: 'Powerful and portable',date: 'jan 10, 2024',src: '/assets/images/store/tech/laptop.jpg',}, 'popular');
+
+storeProducts.addToStore({
+    name: "Legends of Atheria",
+    price: "$59.99",
+    description: "A classic RPG with deep character customization, a rich story, and challenging turn-based combat.",
+    date: "Dec 20, 2025",
+    src: "/assets/images/store/games/League_of_Legends.jpeg" },"popular")
+
+storeProducts.addToStore({
+    name: "Ghost Recon: Warzone",
+    price: "$49.99",
+    description: "A tactical first-person shooter with realistic gunplay, intense multiplayer modes, and a challenging campaign.",
+    date: "Jan 10, 2026",
+    src: "/assets/images/store/games/apocalyptic.jpg" }, "popular")
+
+storeProducts.addToStore({ name: 'Headphones',price: '$149.99',description: 'High-fidelity sound',date: 'apr 5, 2025',src: '/assets/images/store/tech/headphone.jpg',}, 'tech');
+
+storeProducts.addToStore({name: 'Smartwatch',price: '$299.99',description: 'Fitness tracking and more',date: 'may 15, 2024',src: '/assets/images/store/tech/smart_watch.jpg',}, 'tech');
+
+storeProducts.addToStore({name: 'Tablet',price: '$399.99',description: 'Versatile and portable',date: 'jun 20, 2023',src: '/assets/images/store/tech/tablet.jpg',}, 'tech');
 
 
+
+
+//This is creation of the object.
+//the eariler page will load first befire executing the code.
 
 document.addEventListener('DOMContentLoaded', ()=>{
     //store Designing
     let storepage = new StoreDesign(storeProducts);
   
     storepage.toggleNavbar();
-
+    storepage.scrollProductsOnClick();
+    
     storepage.createProductScroll(storepage.popularData ,'sect1');
     storepage.createProductScroll(storepage.latestData ,'sect2');
     storepage.createProductScroll(storepage.fashionData ,'sect3');
     storepage.createProductScroll(storepage.techData ,'sect4');
     storepage.createProductScroll(storepage.gameData ,'sect5');
-  
+
+    
 })

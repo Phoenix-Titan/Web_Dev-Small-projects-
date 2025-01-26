@@ -6,7 +6,8 @@
     <title>My HTML Template</title>
     <link rel="stylesheet" href="/assets/css/globalStyle.css">
      <link rel="stylesheet" href="/assets/css/components/navbar.css">
-    <link rel="stylesheet" href="/assets/css/components/footer.css">
+     <link rel="stylesheet" href="/assets/css/components/footer.css">
+     <link rel="stylesheet" href="/assets/css/cart_page.css">
         
     <!--Fontawsome icon file links-->
     <link rel="stylesheet" href="/fontawsome/css/all.min.css">
@@ -19,8 +20,6 @@
     <header>
         <h1>PhoenSto</h1>
 	<i class="fa-solid fa-bars" id="openBtn"></i>
-	<i class="fa-solid fa-cart-shopping">
-	    <span class="cart_counter">30</span>
 	</i>
 	 <nav id="side_bar" class="nav_bar" >
 	     <i class="fa-solid fa-xmark" id="closeBtn" ></i>
@@ -36,8 +35,124 @@
 
     <main>
         <section>
-            <h2>Welcome to cart page</h2>
-            <p>This is the main content area of my website.</p>
+            <div class="cart_Details_container">
+
+		<div class="cart_Details_title">
+		    <h3>Shopping Cart</h3>
+		    <i class="fa-solid fa-cart-shopping cart"></i>
+		</div>
+		
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+		
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+	
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+		
+		<div class="cart_item">
+		      <span id="number">1</span>
+		      <span id="image">
+			  <img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		      </span>
+		      <span id="name">Men Boxers </span>
+		      <span id="price">$2670.56</span>
+		      <i class="fa-solid fa-xmark"></i>	   
+		</div>
+
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+
+		<div class="cart_item">
+		    <span id="number">1</span>
+		    <span id="image">
+			<img src="/assets/images/store/fashion/boxers.jpg" alt="item image">
+		    </span>
+		    <span id="name">Men Boxers </span>
+		    <span id="price">$2670.56</span>
+		    <i class="fa-solid fa-xmark"></i>
+		   
+		</div>
+	
+	    </div>
+
+	  
+
+
+	    
+	    <div class="Buy_now_container">
+		<h3>Total Items:<span class="Buy_now_detail"> 30</span></h3>
+		<h3>Total Cost: <span class="Buy_now_detail">300.00</span>USD</h3>
+		<img src="/assets/images/cart/payment_methods.png">
+		<button id="pay_button">Buy Now</button>
+	    </div>
+	 
+	
         </section>
     </main>
     
@@ -74,7 +189,7 @@
 	 <p>&copy; 2025 Phoenix E-Commerce Store</p>
     </footer>
 
-    <script src="/assets/js/main.js"></script>
+    <script  type="module" src="/assets/js/main.js"></script>
 
     
 

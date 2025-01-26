@@ -5,6 +5,7 @@
     white-space: nowrap;
     position:relative;
     bottom:10px;
+    scroll-bahavior:smooth;
 }
 /*web browser scroll bar styles for the honizontial scrolling*/
 .product_wrapper::-webkit-scrollbar{
@@ -84,3 +85,12 @@
     bottom:18px;
     right:75px;
  }
+
+.fa-arrow-right{
+    font-size:1.2rem;
+    position:absolute;
+    right:30px;
+    margin-top:5px;
+    
+}
+
